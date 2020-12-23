@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label for="nameInput">Name</label>
+  <input type="text" class="form-control" id="nameInput" placeholder="Enter name" [(ngModel)]="nameInput">
+</div>
+<div class="form-group">
+  <label for="ageInput">Age</label>
+  <input type="number" class="form-control" id="ageInput" [(ngModel)]="ageInput" placeholder="Enter age">
+</div>
+<div class="form-group">
+  <label for="moyInput">Moy</label>
+  <input type="number" class="form-control" id="moyInput" [(ngModel)]="moyInput" placeholder="Enter moy">
+</div>
+<button class="btn btn-primary" (click)="addStudent()" [disabled]="isAddButtonDisabled()">Add</button>

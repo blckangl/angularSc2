@@ -8,6 +8,8 @@ import { SuccessComponent } from './success/success.component';
 import { WarningComponent } from './warning/warning.component';
 import { StudentsComponent } from './students/students.component';
 import {FormsModule} from '@angular/forms';
+import { StudentToolbarComponent } from './student-toolbar/student-toolbar.component';
+import { StudentElementComponent } from './student-element/student-element.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {FormsModule} from '@angular/forms';
     GeneratedComponent,
     SuccessComponent,
     WarningComponent,
-    StudentsComponent
+    StudentsComponent,
+    StudentToolbarComponent,
+    StudentElementComponent
   ],
   imports: [
     BrowserModule,

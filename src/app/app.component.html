@@ -17,30 +17,15 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
-        <div class="form-group">
-          <label for="nameInput">Name</label>
-          <input type="text" class="form-control" id="nameInput" placeholder="Enter name" [(ngModel)]="nameInput">
-        </div>
-        <div class="form-group">
-          <label for="ageInput">Age</label>
-          <input type="number" class="form-control" id="ageInput" [(ngModel)]="ageInput" placeholder="Enter age">
-        </div>
-        <div class="form-group">
-          <label for="moyInput">Moy</label>
-          <input type="number" class="form-control" id="moyInput" [(ngModel)]="moyInput" placeholder="Enter moy">
-        </div>
-        <button class="btn btn-primary" (click)="addStudent()" [disabled]="isAddButtonDisabled()">Add</button>
+      <app-student-toolbar (onStudentAdd)="studentAdd($event)"></app-student-toolbar>
     </div>
     <div class="col-6">
       <div class="container-fluid">
-        <div *ngFor="let student of students" class="row">
-          <div class="col-8">
-            <p>{{student.name}}</p>
-            <small>{{student.age}}</small>
-          </div>
-          <div class="col-4">
-            <p>{{student.moy}}</p>
-          </div>
+        <div  class="row">
+           <div *ngFor="let student of students;let i = index" class="col-6">
+             <p>{{i}}</p>
+             <app-student-element [std]="student"></app-student-element>
+           </div>
         </div>
 
 
